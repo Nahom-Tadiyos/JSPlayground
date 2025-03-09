@@ -1,0 +1,22 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "learning js",
+  "main": "script.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NahomT8/JSPlayground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NahomT8/JSPlayground/issues"
+  },
+  "homepage": "https://github.com/NahomT8/JSPlayground#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
