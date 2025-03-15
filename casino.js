@@ -68,6 +68,29 @@ const getBet = (balance, lines) => {
         }
 }
 
+const spin = () => {
+    const symbols = [];
+    for (const [symbol, count] of Object.entries(SYMBOLS_COUNT)){ //For loop
+        for (let i = 0; i < count; i++){
+            symbols.push(symbol) //Inserting an item into an array
+        }
+    }
+    
+        const reels = [[], [], []]; //3 Nested arrays
+        for(let i = 0; i < COLS; i++){
+            const reelSymbols = [...symbols]; //Copys the symbols availible to choose for each array
+            for(let j = 0; j < ROWS; j++){
+                const randomIndex =  Math.floor(Math.random() * reelSymbols.length) //Generate a number from 0 to 1 and multitpy by reelsymbls
+                const selectedSymbol = reelSymbols[randomIndex]
+                reels[i].push(selectedSymbol);
+                reelSymbols.splice(randomIndex, 1); //Remove one element from array
+            }
+        } 
+}
+
+
+const reels = spin();
+
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
 const bet = getBet(balance, numberOfLines);
