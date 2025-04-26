@@ -1,8 +1,8 @@
-function saveLead(){
-    console.log("Click")
-}
+//const can not be reassigned
 
-let inputBtn = document.getElementById("input-btn")
+let myLeads = []
+const inputsEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
 
 inputBtn.addEventListener("click", function(){
     console.log("Button Clicked from addEventListener")
